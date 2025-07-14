@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio centré</title>
+
+  <style>
+    /* 1. Colonne centrale pour toute la page  ----------------------------- */
+    .wrapper{
+      max-width: 900px;      /* largeur max souhaitée */
+      margin: 0 auto;        /* centre horizontalement */
+      padding: 0 1rem;       /* petite marge interne */
+      font-family: "Georgia", serif;
+    }
+
+    /* 2. Barre de navigation alignée à droite ---------------------------- */
+    nav ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      justify-content:flex-end;  /* droite */
+      gap:1rem;
+    }
+
+    /* 3. Grille des trois sections de contenu ---------------------------- */
+    .sections{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+      grid-gap:2rem 3rem;                    /* espace */
+      justify-items:center;                  /* centre chaque carte */
+      margin-top:2rem;
+    }
+    /* CV doit couvrir les deux colonnes pour être centré en dessous */
+    #cv{ grid-column:1 / -1; text-align:center; }
+
+    /* 4. Formulaire Contact --------------------------------------------- */
+    #contact{
+      text-align:center;         /* centre tout le bloc */
+      margin-top:2rem;
+    }
+    form{
+      display:inline-block;      /* empêche de prendre toute la largeur */
+      text-align:left;           /* réaligne les libellés/champs */
+    }
+    form input, form textarea{
+      width:260px;
+    }
+
+    /* 5. Pied de page ---------------------------------------------------- */
+    footer{
+      text-align:center;
+      margin-top:2rem;
+      border-top:1px solid #ccc;
+      padding-top:1rem;
+      font-size:.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ------------ NAVIGATION ------------ -->
+    <nav>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#work">Travail</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ------------ ACCUEIL / HERO ------------ -->
+    <h3 id="home" style="text-align:center;">BIENVENU(E) SUR MON SITE</h3>
+
+    <!-- ------------ SECTIONS PRINCIPALES ------------ -->
+    <div class="sections">
+      <!-- about -->
+      <section id="about">
+        <h4 style="text-align: center;">À propos</h4>
+        <p>Ingénieur de formation et passionné par les technologies du web, je suis développeur fullstack avec une solide maîtrise des environnements JavaScript (React, Node.js), ainsi que des bases de données relationnelles et NoSQL. Mon parcours en ingénierie m’a appris à aborder les projets avec rigueur, méthode et une forte capacité de résolution de problèmes.
+Aujourd’hui, j’accompagne entreprises et startups dans la conception, le développement et le déploiement d'applications web performantes, évolutives et orientées utilisateur. Curieux, autonome et toujours à l'écoute, je suis constamment en veille pour rester à la pointe des dernières technologies.</p>
+      </section>
+
+      <!-- work -->
+      <section id="work">
+        <h4 style="text-align: center;">Travail</h4>
+        <p><strong>🚀 1. Développement d'une plateforme e-commerce en React & Node.js</strong></p>
+<strong>Résumé</strong>  : Création d’une boutique en ligne complète avec gestion du panier, paiement sécurisé via Stripe, et interface d’administration pour les vendeurs.<br>
+<strong>Stack</strong> : React, Redux, Node.js, Express, MongoDB, Stripe API.<br>
+<strong>Impact</strong> : Réduction de 40 % du taux d’abandon de panier grâce à une refonte UX et amélioration des performances de 30 %.<br>
+
+<p><strong>🛠️ 2. Mise en place d’une architecture microservices pour une app SaaS</strong></p>
+<strong>Résumé</strong> : Refonte d’une application monolithique vers une architecture distribuée pour améliorer la scalabilité et la maintenance.<br>
+<strong>Stack</strong> : Docker, Kubernetes, PostgreSQL, RabbitMQ, Node.js.<br>
+<strong>Impact</strong> : Déploiement automatisé CI/CD, temps de montée en charge divisé par 3, et meilleure isolation des services.
+
+<p><strong>📊 3. Développement d’un tableau de bord analytique en temps réel</strong><br></p>
+<strong>Résumé</strong> : Conception d’un dashboard pour visualiser les données utilisateurs en temps réel avec alertes automatiques.<br>
+<strong>Stack</strong> : Vue.js, Socket.io, Node.js, InfluxDB, Grafana.
+<strong>Impact</strong> : Pilotage plus fin des KPIs, réduction du temps de détection des incidents de 60 %.</p>
+      </section>
+
+      <!-- cv -->
+      <section id="cv">
+        <h4>CV</h4>
+        <img src="./Image/" alt="">
+      </section>
+    </div>
+
+    <!-- ------------ CONTACT ------------ -->
+    <section id="contact">
+      <h4>Contact</h4>
+      <form action="mailto:exemple@domaine.com" method="post">
+        <label for="name">Nom :</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- ------------ FOOTER ------------ -->
+    <footer>
+      © 2025 – JOHNWIZI. Tous droits réservés.
+    </footer>
+  </div><!-- /.wrapper -->
+</body>
+</html>
