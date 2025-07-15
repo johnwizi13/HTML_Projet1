@@ -5,7 +5,7 @@
   <title>Portfolio centré</title>
 
   <style>
-    /* 1. Colonne centrale pour toute la page  ----------------------------- */
+    /*1. Colonne centrale pour toute la page*/
     .wrapper{
       max-width: 900px;      /* largeur max souhaitée */
       margin: 0 auto;        /* centre horizontalement */
@@ -13,7 +13,7 @@
       font-family: "Georgia", serif;
     }
 
-    /* 2. Barre de navigation alignée à droite ---------------------------- */
+    /*2. Barre de navigation alignée à droite */
     nav ul{
       list-style:none;
       margin:0;
@@ -23,7 +23,7 @@
       gap:1rem;
     }
 
-    /* 3. Grille des trois sections de contenu ---------------------------- */
+    /*3. Grille des trois sections de contenu*/
     .sections{
       display:grid;
       grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
@@ -31,23 +31,23 @@
       justify-items:center;                  /* centre chaque carte */
       margin-top:2rem;
     }
-    /* CV doit couvrir les deux colonnes pour être centré en dessous */
+    /*Centrer CV en dessous*/
     #cv{ grid-column:1 / -1; text-align:center; }
 
-    /* 4. Formulaire Contact --------------------------------------------- */
+    /*4. Formulaire Contact*/
     #contact{
-      text-align:center;         /* centre tout le bloc */
+      text-align:center; /* centrer tout le bloc */
       margin-top:2rem;
     }
     form{
-      display:inline-block;      /* empêche de prendre toute la largeur */
-      text-align:left;           /* réaligne les libellés/champs */
+      display:inline-block; /*empêcher de prendre toute la largeur*/
+      text-align:left; /*réalignement des libellés et champs*/
     }
     form input, form textarea{
       width:260px;
     }
 
-    /* 5. Pied de page ---------------------------------------------------- */
+    /*5. Pied de page*/
     footer{
       text-align:center;
       margin-top:2rem;
@@ -61,7 +61,7 @@
 <body>
   <div class="wrapper">
 
-    <!-- ------------ NAVIGATION ------------ -->
+    <!--NAVIGATION-->
     <nav>
       <ul>
         <li><a href="#home">Accueil</a></li>
@@ -72,22 +72,33 @@
       </ul>
     </nav>
 
-    <!-- ------------ ACCUEIL / HERO ------------ -->
-    <h3 id="home" style="text-align:center;">BIENVENU(E) SUR MON SITE</h3>
+    <!--ACCUEIL / HERO-->
+    <h3 id="home" style="text-align:center;">BIENVENU(E) SUR MON SITE...</h3>
 
-    <!-- ------------ SECTIONS PRINCIPALES ------------ -->
+    <!--SECTIONS PRINCIPALES-->
     <div class="sections">
-      <!-- about -->
+      <!--about-->
       <section id="about">
-        <h4 style="text-align: center;">À propos</h4>
-        <p>Ingénieur de formation et passionné par les technologies du web, je suis développeur fullstack avec une solide maîtrise des environnements JavaScript (React, Node.js), ainsi que des bases de données relationnelles et NoSQL. Mon parcours en ingénierie m’a appris à aborder les projets avec rigueur, méthode et une forte capacité de résolution de problèmes.
-Aujourd’hui, j’accompagne entreprises et startups dans la conception, le développement et le déploiement d'applications web performantes, évolutives et orientées utilisateur. Curieux, autonome et toujours à l'écoute, je suis constamment en veille pour rester à la pointe des dernières technologies.</p>
+        <h4 style="text-align: center;"><u>About</u></h4>
+        <p style="text-indent: 2em;"><em><strong>Ingénieur</strong> de formation et passionné par les technologies du web, je suis <strong>développeur fullstack</strong> avec une <strong>solide</strong> maîtrise des environnements <strong>JavaScript (React, Node.js)</strong>, ainsi que <strong>des bases de données relationnelles</strong> et <strong>NoSQL</strong>.
+Mon parcours en ingénierie m’a appris à aborder les projets avec rigueur, méthode et une forte capacité de résolution de problèmes.</em>
+
+<em>Aujourd’hui, j’accompagne <strong>les entreprises</strong> et <strong>startups</strong> dans <strong>la conception</strong>, <strong>le développement</strong> et <strong>le déploiement d’applications web performantes</strong>, <strong>évolutives</strong> et <strong>orientées utilisateur</strong>.
+Je conçois des solutions robustes du <strong>front-end</strong> au <strong>back-end</strong>, en intégrant des outils modernes comme <strong>Tailwind CSS</strong>, <strong>MongoDB</strong>, <strong>TypeScript</strong> ou encore <strong>Docker</strong>.
+Je me distingue par ma capacité à :<br>
+<p><strong>➤Analyser rapidement les besoins métiers,</strong></p>
+<p><strong>➤Transformer les idées en solutions concrètes,</strong></p>
+<p><strong>➤Assurer la qualité du code par des bonnes pratiques,</strong></p>
+<p><strong>➤Et livrer des produits dans les délais.</strong></p></em>
+
+<em><strong>Curieux, autonome et toujours à l'écoute, je suis en veille technologique permanente pour rester à la pointe des tendances (Next.js, IA, microservices, sécurité).
+Je suis convaincu qu’un bon développeur ne code pas seulement pour créer, mais pour apporter de la valeur.</p></strong></em>
       </section>
 
-      <!-- work -->
+      <!--work-->
       <section id="work">
-        <h4 style="text-align: center;">Travail</h4>
-        <p><strong>🚀 1. Développement d'une plateforme e-commerce en React & Node.js</strong></p>
+        <h4 style="text-align: center;"><u>Work</u></h4>
+        <em><p><strong>🚀 1. Développement d'une plateforme e-commerce en React & Node.js</strong></p>
 <strong>Résumé</strong>  : Création d’une boutique en ligne complète avec gestion du panier, paiement sécurisé via Stripe, et interface d’administration pour les vendeurs.<br>
 <strong>Stack</strong> : React, Redux, Node.js, Express, MongoDB, Stripe API.<br>
 <strong>Impact</strong> : Réduction de 40 % du taux d’abandon de panier grâce à une refonte UX et amélioration des performances de 30 %.<br>
@@ -100,37 +111,58 @@ Aujourd’hui, j’accompagne entreprises et startups dans la conception, le dé
 <p><strong>📊 3. Développement d’un tableau de bord analytique en temps réel</strong><br></p>
 <strong>Résumé</strong> : Conception d’un dashboard pour visualiser les données utilisateurs en temps réel avec alertes automatiques.<br>
 <strong>Stack</strong> : Vue.js, Socket.io, Node.js, InfluxDB, Grafana.
-<strong>Impact</strong> : Pilotage plus fin des KPIs, réduction du temps de détection des incidents de 60 %.</p>
+<strong>Impact</strong> : Pilotage plus fin des KPIs, réduction du temps de détection des incidents de 60 %.</p></em>
       </section>
 
-      <!-- cv -->
+      <!--cv-->
       <section id="cv">
-        <h4>CV</h4>
-        <img src="./Image/" alt="">
+        <h4><u>CV</u></h4>
+        <img class="./Image/CV_Projet1.png"  style="width:100%; max-width:600px; height:auto;" src="./Image/CV_Projet1.png" alt="CV Projet 1">
       </section>
     </div>
 
-    <!-- ------------ CONTACT ------------ -->
+    <!--CONTACT-->
     <section id="contact">
-      <h4>Contact</h4>
+      <h4><u>Contact</u></h4>
       <form action="mailto:exemple@domaine.com" method="post">
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
+       <table align="center">
+    <tr>
+      <td><label for="name">Nom :</label></td>
+      <td>
+        <input type="text" id="name" name="name" required placeholder="Veuillez entrez votre nom...">
+      </td>
+    </tr>
+    <tr><td colspan="2"><br></td></tr>
+    <tr>
+      <td><label for="email">Email :</label></td>
+      <td>
+        <input type="email" id="email" name="email" required placeholder="Veuillez entrer votre mail...">
+      </td>
+    </tr>
+    <tr><td colspan="2"><br></td></tr>
+    <tr>
+      <td><label for="message">Message :</label></td>
+      <td>
+        <textarea id="message" name="message" rows="4" required placeholder="Saisir votre message..."></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <br>
         <button type="submit">Envoyer</button>
+      </td>
+    </tr>
+  </table>
       </form>
     </section>
 
-    <!-- ------------ FOOTER ------------ -->
+    <!--FOOTER-->
     <footer>
-      © 2025 – JOHNWIZI. Tous droits réservés.
+      <em>© 2025 – Tous droits réservés.</em>
+      <p><strong><h6>Made By</h6></strong></p>
+<p><a href="https://www.linkedin.com/in/wilfried-oupoh-740160254/" target="_blank"><strong><h6>JOHNWIZI</h6></strong></a>
+      
     </footer>
-  </div><!-- /.wrapper -->
+  </div>
 </body>
 </html>
